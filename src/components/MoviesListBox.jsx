@@ -31,7 +31,7 @@ const MoviesListBox = ({ loading }) => {
             );
           })
         )}
-        {moviesList.length == 0 && (
+        {!loading && moviesList.length == 0 && (
           <div className="d-flex h-100 justify-content-center align-items-center">
             <h6>No Movies Found</h6>
           </div>
