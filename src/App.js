@@ -8,6 +8,7 @@ import MoviesListBox from "./components/MoviesListBox";
 import { GetcharactersData, getMoviesList } from "./redux/action/MoviesActions";
 function App() {
   const [loading, setLoading] = useState(false);
+
   const dispatch = useDispatch();
   let charactersData = [];
   charactersData = useSelector((state) => state.Movies.charactersData);

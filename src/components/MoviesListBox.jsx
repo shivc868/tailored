@@ -25,15 +25,15 @@ const MoviesListBox = ({ loading }) => {
         ) : (
           moviesList.map((item, index) => {
             return (
-              <div className="movies-list">
-                <div key={index}>
+              <div key={index} className="movies-list">
+                <div>
                   <h6>{item.title}</h6>
                 </div>
               </div>
             );
           })
         )}
-        {!loading && moviesList.length == 0 && (
+        {moviesList.length == 0 && (
           <div className="d-flex h-100 justify-content-center align-items-center">
             <h6>No Movies Found</h6>
           </div>
