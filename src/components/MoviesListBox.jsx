@@ -26,9 +26,7 @@ const MoviesListBox = ({ loading }) => {
           moviesList.map((item, index) => {
             return (
               <div key={index} className="movies-list">
-                <div>
-                  <h6>{item.title}</h6>
-                </div>
+                <h6 className="mb-0">{item.title}</h6>
               </div>
             );
           })

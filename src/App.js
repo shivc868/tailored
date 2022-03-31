@@ -17,6 +17,7 @@ function App() {
     dispatch(GetcharactersData(setLoading));
   }, []);
   const charactersOnchangeHandler = (newValue) => {
+    setLoading(true);
     const films = newValue.films;
     dispatch(getMoviesList(setLoading, films));
   };

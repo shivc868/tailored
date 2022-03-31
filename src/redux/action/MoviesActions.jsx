@@ -39,6 +39,7 @@ export const GetcharactersData = (setLoading) => async (dispatch) => {
 };
 // GET MOVIES LIST ACTION
 export const getMoviesList = (setLoading, films) => async (dispatch) => {
+  setLoading(true);
   try {
     setLoading(true);
     let data = [];
@@ -47,11 +48,11 @@ export const getMoviesList = (setLoading, films) => async (dispatch) => {
       const response = await axios.get(`${films[i - 1]}`);
       if (response.status === 200) {
         data.push(response.data);
-        setLoading(false);
       } else {
         setLoading(false);
       }
     }
+    setLoading(false);
     dispatch(getMoviesListSuccess(data));
   } catch (error) {
     setLoading(false);
